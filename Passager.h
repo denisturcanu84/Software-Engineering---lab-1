@@ -1,5 +1,6 @@
-#include <Car.h>
-#include <Person.h>
+//#include "Car.h"
+#include "Person.h"
+
 
 
 class Passager : public Person {
@@ -13,5 +14,5 @@ class Passager : public Person {
 
         string getPreference () {
             return preference;
-        }
+        };
 }

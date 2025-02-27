@@ -1,16 +1,17 @@
-#include <Car.h>
+#include "Car.h"
 
 
-class fuelCar : public Car {
+class FuelCar : public Car {
     private:
         string fuel_type;
         int fuel_capacity;
         int fuel_consumption;
+        string type;
 
         public:
-        fuelCar () : type("Fuel") {};
+        FuelCar () : type("Fuel") {};
 
-        fuelCar (int passagers) : type("Fuel") {
+        FuelCar (int passagers) : type("Fuel") {
             passanger_capacity = passagers;
         };
 
@@ -22,7 +23,7 @@ class fuelCar : public Car {
             return fuel_type;
         }
         
-        string fuelCapacity () {
+        int fuelCapacity () {
             return fuel_capacity;
         }
 
@@ -33,4 +34,4 @@ class fuelCar : public Car {
         int getPassagerCapacity () {
             return passanger_capacity;
         }
-}
+};

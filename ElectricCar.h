@@ -1,12 +1,16 @@
-#include <Car.h>
+#include "Car.h"
 
 class ElectricCar : public Car {
     private:
         int battery_capacity;
         int range;
+        string type;
 
         public:
-        ElectricCar () : type("Electric") {};
+        ElectricCar () {
+            type = "Electric";
+        };
+        
 
         ElectricCar (int passagers) : type("Electric") {
             passanger_capacity = passagers;
@@ -19,4 +23,4 @@ class ElectricCar : public Car {
         int getPassagerCapacity () {
             return passanger_capacity;
         }
-}
+};

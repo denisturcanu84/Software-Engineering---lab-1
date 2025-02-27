@@ -1,32 +1,47 @@
 #include <iostream>
 #include <string>
+#include "Passager.h"
 using namespace std;
-
 class Car {
     private:
         string brand;
-        string type;
         int year;
+
+    protected:
+        string type;
         int passanger_capacity;
-        Passager *passagers[];
+        Passager *passagers[4]; 
 
     public:
         Car() {};
+        Car(string brand, int year, int passanger_capacity){
+            this->brand = brand;
+            this->year = year;
+            this->passanger_capacity = passanger_capacity;
+        };
         
         virtual string getType (){
             return type;
-        }
+        };
 
-        virtual string getBrand {
-            return brand;
-        }
+        string getBrand() {
+            return this->brand;
+        };
         
-        virtual int getYear {
+         int getYear() {
             return year;
-        }
+        };
 
-        virtual int getPassangerCapacity {
+        int getPassangerCapacity() {
             return passanger_capacity;
+        };
+        void addPassager(Passager* passager){
+            for (int i = 0; i < 4; i++){
+                if (passagers[i] == NULL){
+                    passagers[i] = passager;
+                    break;
+                }
+            }
         }
         
-}
+};

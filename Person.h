@@ -1,4 +1,4 @@
-#include <Car.h>
+//#include "Car.h"
 
 class Person {
     private:
@@ -11,12 +11,12 @@ class Person {
             this->age = age;
         }
 
-        string getName () {
+       virtual string getName () {
             return name;
         }
 
-        int getAge () {
+       virtual int getAge () {
             return age;
         }
 
-}
+};

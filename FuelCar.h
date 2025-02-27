@@ -10,6 +10,12 @@ class FuelCar : public Car {
 
         public:
         FuelCar () : type("Fuel") {};
+        FuelCar(string brand, int year, int passanger_capacity, string fuel_type, int fuel_capacity, int fuel_consumption) : Car(brand, year, passanger_capacity) {
+            this->fuel_type = fuel_type;
+            this->fuel_capacity = fuel_capacity;
+            this->fuel_consumption = fuel_consumption;
+            type = "Fuel";
+        };
 
         FuelCar (int passagers) : type("Fuel") {
             passanger_capacity = passagers;
